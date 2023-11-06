@@ -13,8 +13,8 @@ sudo apt-get update
 sudo apt-get install nodejs -y
 
 # Clone a Git repository and perform other actions
-git clone https://github.com/V-a-O-s/2.git
-mv 2 m347_LB
+git clone https://github.com/V-a-O-s/m347.git
+mv m347 m347_LB
 cd m347_LB
 npm init -y
 npm install express mongoose path dotenv
