@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paketmeister.ch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+        <header>
+            <h1>Schweizer Paketmeister</h1>
+            <p>Zuverlässigkeit in jeder Lieferung.</p>
+        </header>
+    <main>
+        
+        <ul>
+            <li>
+                <section id="tracking-form-container">
+                    <h2>Paket verfolgen</h2>
+                    <form id="tracking-form" method="post">
+                        <input type="text" id="tracking-code" name="tracking_code" placeholder="Tracking-Code">
+                        <input type="text" id="plz" name="plz" placeholder="Postleitzahl">
+                        <span id="tracking-error-msg"></span>
+                        <button type="submit">Suchen</button> <button><a href="/new">Neues Paket</a></button>
+                    </form>
+                </section>
+                
+            </li>
+            <li>
+                <section id="tracking-results" >
+                    <h2>Tracking-Ergebnisse</h2>
+                    <ul>
+                        <li>Tracking-Code:               <span class="paket-data" id="code"></span></li>
+                        <li>Status:                      <span class="paket-data" id="status"></span></li>
+                        <li>Lieferadresse:               <span class="paket-data" id="lieferadresse"></span></li>
+                        <li>Voraussichtliche Zustellung: <span class="paket-data" id="arrival"></span></li>
+                        <li>Gewicht:                     <span class="paket-data" id="gewicht"></span></li>
+                    </ul>
+                </section>
+            </li>
+        </ul>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

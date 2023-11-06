@@ -1,0 +1,56 @@
+body {
+    font-family: sans-serif;
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="date"] {
+    width: 200px;
+}
+
+select {
+    width: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.gewicht-container {
+    display: flex;
+    align-items: center;
+}
+
+.gewicht-input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.gewicht-unit {
+    width: 100px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+button{
+    margin: 5px 0;
+}
+
+button:hover{
+    cursor: pointer;
+}

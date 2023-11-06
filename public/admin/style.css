@@ -1,0 +1,77 @@
+/* Overall styles */
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.form-div{
+    display: none;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+input, select, button {
+  width: 98%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* Form styles */
+form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+select {
+  margin-top: 10px;
+}
+
+.dClass0{
+    background-color: #cfe2ff;
+}
+
+.dClass1{
+    background-color: #d1ecf1;
+}
+
+#items-table tr:hover {
+  background-color: #fff;
+}
+
+#items-table tr{
+    margin: 10px 0;
+}
+
+#items-table tr td{
+    padding: 5px;
+}
+
+
+button:hover{
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin: 10px 0;
+    line-height: 10px;
+}
+
+button:hover{
+  cursor: pointer;
+}

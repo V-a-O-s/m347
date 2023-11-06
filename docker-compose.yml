@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  mongo_db:
+    container_name: db_container
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+    networks:
+      - network
+    volumes:
+      - mongo_db:/data/db
+
+  # Webserver
+  web-service:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - network
+    environment:
+      DB_URI: mongodb://db_container:27017
+    depends_on:
+      - mongo_db
+
+volumes:
+  mongo_db: {}
+
+networks:
+  network:
+    driver: bridge

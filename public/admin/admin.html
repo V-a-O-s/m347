@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Dashboard</h1>
+  <ul>
+    <li>
+      <input type="text" id="api-key" placeholder="API Key" required>
+    </li>
+    <li>
+      <input type="radio" name="mode" value="aktualisieren" checked> Aktualisieren
+      <input type="radio" name="mode" value="loeschen"> Löschen
+      <input type="radio" name="mode" value="uebersicht"> Übersicht
+    </li>
+  <div class="form-div" id="aktualisieren">
+    <h2>Aktualisieren</h2>
+  
+    <form class="1" action="/aktualisieren" method="post">
+      <input type="text" id="upId" name="id" placeholder="Tracking-Code">
+      <input type="text" id="upPlz" name="oldPlz" placeholder="Alte PLZ">
+      <br>
+      <input type="text" id="upNPlz" name="newPlz" placeholder="Neue PLZ">
+      <input type="text" id="upOrt" name="ort" placeholder="Ort">
+      <input type="text" id="upAdresse" name="adresse" placeholder="Adresse">
+      <select id="upStat" name="status">
+        <option value="In Bearbeitung">In Bearbeitung</option>
+        <option value="In Zustellung">In Zustellung</option>
+        <option value="Zugestellt">Zugestellt</option>
+      </select>
+      <button type="submit" onclick="console.log('Update')" value="Aktualisieren">Aktualisieren</button>
+    </form>
+  </div>
+  <div class="form-div" id="loeschen">
+    <h2>Löschen</h2>
+
+    <form class="2" action="/loeschen" method="post">
+      <input type="text" name="id" placeholder="ID">
+      <input type="text" name="plz" placeholder="PLZ">
+      <button type="submit" onclick="console.log('Löschen')" value="Löschen">Löschen</button>
+    </form>
+  </div>
+
+  <div class="form-div" id="uebersicht">
+    <h2>Übersicht</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tracking-Code</th>
+          <th>PLZ</th>
+          <th>Ort</th>
+          <th>Adresse</th>
+          <th>Status</th>
+          <th>Gewicht</th>
+          <th>Ankunft</th>
+        </tr>
+      </thead>
+      <tbody id="items-table"></tbody>
+    </table>
+    
+  </div>
+  <script src="admin.js"></script>
+</body>
+</html>

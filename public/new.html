@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Package Submission Form</title>
+  <link rel="stylesheet" href="stylen.css">  
+</head>
+<body>
+  
+
+  <form action="/submit" method="post">
+    <h1>Neues Paket senden</h1>
+    <input type="text" name="plz" placeholder="PLZ">
+    <input type="text" name="ort" placeholder="Ort">
+    <input type="text" name="adresse" placeholder="Adresse">
+    <input type="number" name="gewicht" class="gewicht-input" placeholder="Gewicht in kg">
+    <button type="submit">Submit</button> <button><a href="/">Zur Übersicht</a></button>
+    <p id="code-return"></p>
+  </form>
+  <script src="new.js"></script>
+</body>
+</html>
