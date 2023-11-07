@@ -19,5 +19,5 @@ cd m347_LB
 npm init -y
 npm install express mongoose path dotenv
 
-# Run a Python script (assuming "setup.py" is a Python script)
+# Run the setup script
 sudo python3 setup.py
